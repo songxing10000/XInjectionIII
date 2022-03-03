@@ -4,5 +4,7 @@ platform :ios, '9.0'
 
 target 'XInjectionIII_Example' do
   pod 'XInjectionIII', :path => '../'
+#pod 'XInjectionIII', :git => 'https://github.com/songxing10000/XInjectionIII'
+
 
 end
