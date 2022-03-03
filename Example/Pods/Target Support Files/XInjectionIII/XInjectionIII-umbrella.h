@@ -11,7 +11,8 @@
 #endif
 
 #import "InjectionIIIHelper.h"
-#import "UIViewController+Func.h"
+#import "UIView+XSRefresh.h"
+#import "UIViewController+XSRefresh.h"
 
 FOUNDATION_EXPORT double XInjectionIIIVersionNumber;
 FOUNDATION_EXPORT const unsigned char XInjectionIIIVersionString[];

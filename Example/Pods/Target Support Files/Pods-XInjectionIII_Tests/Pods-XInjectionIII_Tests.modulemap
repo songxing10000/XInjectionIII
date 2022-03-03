@@ -1,6 +1,0 @@
-framework module Pods_XInjectionIII_Tests {
-  umbrella header "Pods-XInjectionIII_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

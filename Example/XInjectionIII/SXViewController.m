@@ -7,6 +7,7 @@
 //
 
 #import "SXViewController.h"
+#import <XInjectionIII/UIViewController+XSRefresh.h>
 
 @interface SXViewController ()
 
@@ -14,16 +15,11 @@
 
 @implementation SXViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    [self addRealTimeRefresh];
+    self.title = @"新建收货地址";
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+ 
 @end

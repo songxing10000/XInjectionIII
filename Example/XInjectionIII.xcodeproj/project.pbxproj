@@ -18,6 +18,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7E72D43B77926CBF762A6A4D /* Pods_XInjectionIII_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD3E659F438E8ADA48833E0 /* Pods_XInjectionIII_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9883DC9B27D1052000FAE59B /* XSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9883DC9A27D1052000FAE59B /* XSTableViewCell.m */; };
+		9883DC9E27D1054100FAE59B /* XSTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9883DC9D27D1054100FAE59B /* XSTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		967D3C26EB6201F7C77B6D00 /* Pods-XInjectionIII_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XInjectionIII_Tests.release.xcconfig"; path = "Target Support Files/Pods-XInjectionIII_Tests/Pods-XInjectionIII_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9883DC9927D1052000FAE59B /* XSTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTableViewCell.h; sourceTree = "<group>"; };
+		9883DC9A27D1052000FAE59B /* XSTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSTableViewCell.m; sourceTree = "<group>"; };
+		9883DC9C27D1054100FAE59B /* XSTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTestView.h; sourceTree = "<group>"; };
+		9883DC9D27D1054100FAE59B /* XSTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSTestView.m; sourceTree = "<group>"; };
 		A81627AFF6245639884E43EA /* XInjectionIII.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XInjectionIII.podspec; path = ../XInjectionIII.podspec; sourceTree = "<group>"; };
 		A95626CA68BEA761D066B3C4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B0A3E0B949296784A7F4CCE3 /* Pods-XInjectionIII_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XInjectionIII_Example.debug.xcconfig"; path = "Target Support Files/Pods-XInjectionIII_Example/Pods-XInjectionIII_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* SXViewController.h */,
 				6003F5A6195388D20070C39A /* SXViewController.m */,
+				9883DC9927D1052000FAE59B /* XSTableViewCell.h */,
+				9883DC9A27D1052000FAE59B /* XSTableViewCell.m */,
+				9883DC9C27D1054100FAE59B /* XSTestView.h */,
+				9883DC9D27D1054100FAE59B /* XSTestView.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -257,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* SXAppDelegate.m in Sources */,
+				9883DC9E27D1054100FAE59B /* XSTestView.m in Sources */,
 				6003F5A7195388D20070C39A /* SXViewController.m in Sources */,
+				9883DC9B27D1052000FAE59B /* XSTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

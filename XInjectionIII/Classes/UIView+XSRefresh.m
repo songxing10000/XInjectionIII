@@ -8,16 +8,10 @@
 #import "UIView+XSRefresh.h"
 
 @implementation UIView (XSRefresh)
-static SEL _action = nil;
-+ (void)setAction:(SEL)action {
-  if (_action != action) {
-      _action = action;
-  }
-}
+
 -(void)addRealTimeRefreshByAction:(nullable SEL)action {
 
 #if TARGET_IPHONE_SIMULATOR
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
     UIView.action = action;
 #endif
@@ -25,7 +19,12 @@ static SEL _action = nil;
 }
 
 #if TARGET_IPHONE_SIMULATOR
-
+static SEL _action = nil;
++ (void)setAction:(SEL)action {
+  if (_action != action) {
+      _action = action;
+  }
+}
 - (void)injectionNotification:(NSNotification *)notification {
     
     NSArray *array = notification.object;
