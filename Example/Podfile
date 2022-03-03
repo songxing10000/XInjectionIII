@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'XInjectionIII_Example' do
+  pod 'XInjectionIII', :path => '../'
+
+  target 'XInjectionIII_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
