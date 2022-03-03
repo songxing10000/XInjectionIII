@@ -1,0 +1,16 @@
+PODS:
+  - XInjectionIII (0.1.0)
+
+DEPENDENCIES:
+  - XInjectionIII (from `../`)
+
+EXTERNAL SOURCES:
+  XInjectionIII:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XInjectionIII: 4d480e1abb3b51d17861b8c39708de25aa76e78b
+
+PODFILE CHECKSUM: 7a9dec16566e953e77e3583f465b7abbe8761580
+
+COCOAPODS: 1.11.2

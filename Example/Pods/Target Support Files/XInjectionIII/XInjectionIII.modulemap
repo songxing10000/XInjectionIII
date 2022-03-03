@@ -1,0 +1,6 @@
+framework module XInjectionIII {
+  umbrella header "XInjectionIII-umbrella.h"
+
+  export *
+  module * { export * }
+}
