@@ -22,6 +22,7 @@
 
 - (void)configUI {
     // 这里开始布局
+    self.backgroundColor = [UIColor purpleColor];
 }
 
 @end

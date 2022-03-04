@@ -1,9 +1,19 @@
- 
+基于大佬的文章，https://juejin.cn/post/6850037272415813645 
 
-安装
+
+---
+### 效果
+![](testdemo.gif)
+---
+### 安装
 ```ruby
 pod 'XInjectionIII', :git => 'https://github.com/songxing10000/XInjectionIII'
  ```
+---
+### 使用：
+启动`InjectionIII`,打开项目所在文件夹。
+
+
 
  vc使用
 
@@ -67,3 +77,8 @@ view使用
 
 @end
 ```
+修改代码后，可设置自动刷新或者按`command`加`s`手动保存刷新
+
+---
+### 本地`pod`库
+需要调整下位置，保证`xcworkspace`所在文件夹，有源码文件夹。

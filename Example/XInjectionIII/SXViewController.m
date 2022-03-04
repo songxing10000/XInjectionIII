@@ -8,6 +8,8 @@
 
 #import "SXViewController.h"
 #import <XInjectionIII/XInjectionIII.h>
+#import "XSTableViewCell.h"
+#import "XSTestView.h"
 
 @interface SXViewController ()
 
@@ -19,7 +21,11 @@
     [super viewDidLoad];
 	
     [self addRealTimeRefresh];
-    self.title = @"新建收货地址";
+    self.title = @"地址???";
+    
+    
+    [self.view addSubview: [[XSTestView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)]];
+    [self.view addSubview: [[XSTableViewCell new]initWithFrame:CGRectMake(100, 900, 100, 100)]];
 }
  
 @end

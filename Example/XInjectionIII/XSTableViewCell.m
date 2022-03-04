@@ -19,5 +19,6 @@
 }
 - (void)configUI {
     // 这里开始布局
+    self.contentView.backgroundColor = [UIColor greenColor];
 }
 @end
