@@ -7,7 +7,7 @@
 //
 
 #import "XSTestView.h"
-#import <XInjectionIII/UIView+XSRefresh.h>
+#import <XInjectionIII/XInjectionIII.h>
 
 @implementation XSTestView
 - (instancetype)initWithFrame:(CGRect)frame

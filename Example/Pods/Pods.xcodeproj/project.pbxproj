@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2302E40ACCDE57ACB61725EACD04A6BD /* XInjectionIII-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF63476CF4AE7905693C6A024B83C8F /* XInjectionIII-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		084B1C49C1B7C126A206BBF6BCC74A3D /* XInjectionIII-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E335347CAEB214F01B45015843D56949 /* XInjectionIII-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B39A68D6B1A2CF7A229038B5C815DA7 /* UIView+XSRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B90B53BFA9E286CE8E620F9486BE23 /* UIView+XSRefresh.m */; };
+		1B93B9BE3EF994D130285A4AE4248C23 /* XInjectionIII-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1525410BE55FB14B34CBF07F9632039B /* XInjectionIII-dummy.m */; };
 		368979F723EF7334F7AB703B34D9797C /* Pods-XInjectionIII_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C1B89712FC18E44895DCAE2D1F7C9DBE /* Pods-XInjectionIII_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64682E048C5835EFBD0837FEDBFA4372 /* UIView+XSRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AA5DC8FC8F137EC64CA89427D4CC6 /* UIView+XSRefresh.m */; };
-		69F9A4EF92884D1C16A50358C6B7B47B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4E05E30A64E52265C0EAB3DA4B10BA76 /* XInjectionIII.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB0A69842CC83B8A09D4C88DF1BC01F /* XInjectionIII.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E5722C85F45C3170580531FB154C4D6 /* InjectionIIIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DAE5507ED94E58CA7FE0B60CEAF0F2 /* InjectionIIIHelper.m */; };
 		8466F4B72CB3CEA599683040DCB263BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		9C1231187A49DA663FFAAFA23EF7BE0A /* InjectionIIIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8012C87ACB1217D9C0078A7BA95487F3 /* InjectionIIIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5F7BE06008A61E0907213ACC9537E0D /* InjectionIIIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064C1A3BFF4229347A3634906F58871 /* InjectionIIIHelper.m */; };
-		B8AE0A949290A7611C692EA322B57462 /* UIViewController+XSRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF433BAF51E21D32F549AC3672DE4DE /* UIViewController+XSRefresh.m */; };
-		C1F9B93FECAA71930B104E8DFE8632C9 /* UIView+XSRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = A6938501299A0ADFF9FBA6DB8DF4723F /* UIView+XSRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C75CD827C2385D4986E8EE487D901F12 /* XInjectionIII-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 171FF4F457DA9E3C76DE172946A954AD /* XInjectionIII-dummy.m */; };
+		B206BE415C06F4AD1832D309DE50DB92 /* InjectionIIIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 083555F054118EA3FBDE24EE8A64DC9D /* InjectionIIIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5291B261A56A5EEAC0643C188497E6C /* UIView+XSRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 510F5BB6606D31C77373D79266305CDA /* UIView+XSRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB1C69B2248FA719C966BB963987F284 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D2B094DC2562A629CEB059A6910E95DD /* UIViewController+XSRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = B197C5F2448A713797D4C4A3277B17FF /* UIViewController+XSRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9ABE9E169EA62C37F0DF12E6C4DA2B1 /* Pods-XInjectionIII_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ADC3BF347BF9403F81A3794594782 /* Pods-XInjectionIII_Example-dummy.m */; };
-		F596FBA4BBADCE0DDBA1FCDC7DBFB5EF /* UIViewController+XSRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = DDABCCF0EECF83093A3955DD0180DB82 /* UIViewController+XSRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1ABD1FC379F90A488B5ABB047ECD101 /* UIViewController+XSRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9A4C2B75D6D4612885888EE3A3C62 /* UIViewController+XSRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9633BF2AA62AB5F2D1FEC94BD932E990 /* PBXContainerItemProxy */ = {
+		F14D171EB12C794C86A2735EE4FDBFF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -32,43 +33,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0064C1A3BFF4229347A3634906F58871 /* InjectionIIIHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InjectionIIIHelper.m; path = XInjectionIII/Classes/InjectionIIIHelper.m; sourceTree = "<group>"; };
+		083555F054118EA3FBDE24EE8A64DC9D /* InjectionIIIHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InjectionIIIHelper.h; path = XInjectionIII/Classes/InjectionIIIHelper.h; sourceTree = "<group>"; };
+		09DAE5507ED94E58CA7FE0B60CEAF0F2 /* InjectionIIIHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InjectionIIIHelper.m; path = XInjectionIII/Classes/InjectionIIIHelper.m; sourceTree = "<group>"; };
 		0A39281F454337B03EB486028DB30D96 /* Pods-XInjectionIII_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XInjectionIII_Example-frameworks.sh"; sourceTree = "<group>"; };
 		10C3FD31A6510521221AFBD2367ECB56 /* Pods-XInjectionIII_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-XInjectionIII_Example"; path = Pods_XInjectionIII_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		171FF4F457DA9E3C76DE172946A954AD /* XInjectionIII-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XInjectionIII-dummy.m"; sourceTree = "<group>"; };
-		1FAC7BB21F39509A80D994713423CB46 /* XInjectionIII.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XInjectionIII.release.xcconfig; sourceTree = "<group>"; };
+		1525410BE55FB14B34CBF07F9632039B /* XInjectionIII-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XInjectionIII-dummy.m"; sourceTree = "<group>"; };
+		17BF0C2BA8899486CF768A8724574F01 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		23996B1E98AF43A61D57E2115F711737 /* Pods-XInjectionIII_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-XInjectionIII_Example.modulemap"; sourceTree = "<group>"; };
-		24FE956747CC00DD4FF8F6EAD5D232CC /* XInjectionIII.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XInjectionIII.debug.xcconfig; sourceTree = "<group>"; };
 		32630644E27E29DEE7BA6A7C456D4F6B /* Pods-XInjectionIII_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XInjectionIII_Example-Info.plist"; sourceTree = "<group>"; };
 		3A7ADC3BF347BF9403F81A3794594782 /* Pods-XInjectionIII_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XInjectionIII_Example-dummy.m"; sourceTree = "<group>"; };
-		4DF63476CF4AE7905693C6A024B83C8F /* XInjectionIII-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XInjectionIII-umbrella.h"; sourceTree = "<group>"; };
-		52E9F3E8311ED3E2133740C203A0CB55 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		510F5BB6606D31C77373D79266305CDA /* UIView+XSRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+XSRefresh.h"; path = "XInjectionIII/Classes/UIView+XSRefresh.h"; sourceTree = "<group>"; };
+		52322AE1EB6DDBFB1A1FB240520B31B0 /* XInjectionIII.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XInjectionIII.release.xcconfig; sourceTree = "<group>"; };
 		557B68883A41253AADABCBFFF71DADE5 /* XInjectionIII */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XInjectionIII; path = XInjectionIII.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FCDF9A8771BFEA6DD796134E0E83A82 /* XInjectionIII-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XInjectionIII-prefix.pch"; sourceTree = "<group>"; };
-		6F5AA5DC8FC8F137EC64CA89427D4CC6 /* UIView+XSRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+XSRefresh.m"; path = "XInjectionIII/Classes/UIView+XSRefresh.m"; sourceTree = "<group>"; };
+		61B90B53BFA9E286CE8E620F9486BE23 /* UIView+XSRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+XSRefresh.m"; path = "XInjectionIII/Classes/UIView+XSRefresh.m"; sourceTree = "<group>"; };
+		6C034B165D192F39CF635A0C6659D16C /* XInjectionIII.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XInjectionIII.modulemap; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7561A76C34CC8DD1A1359290EB2821B9 /* Pods-XInjectionIII_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XInjectionIII_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7F45B0D0010DFAB654889BEFD99DF69B /* XInjectionIII.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XInjectionIII.modulemap; sourceTree = "<group>"; };
-		8012C87ACB1217D9C0078A7BA95487F3 /* InjectionIIIHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InjectionIIIHelper.h; path = XInjectionIII/Classes/InjectionIIIHelper.h; sourceTree = "<group>"; };
-		8DF118A9480D55CD90FC07F661AA8446 /* XInjectionIII.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XInjectionIII.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99DC9FF58B33860639C99A5E4E895D51 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		83F9A4C2B75D6D4612885888EE3A3C62 /* UIViewController+XSRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+XSRefresh.m"; path = "XInjectionIII/Classes/UIViewController+XSRefresh.m"; sourceTree = "<group>"; };
+		9626BC7BE1A3E5F46B53A85AB5F3AF63 /* XInjectionIII-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XInjectionIII-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A07E3F4F6B5C053575962BCAA6A485A4 /* Pods-XInjectionIII_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XInjectionIII_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A6938501299A0ADFF9FBA6DB8DF4723F /* UIView+XSRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+XSRefresh.h"; path = "XInjectionIII/Classes/UIView+XSRefresh.h"; sourceTree = "<group>"; };
+		AB601A06CC52312D6C52B27566DC63AA /* XInjectionIII-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XInjectionIII-Info.plist"; sourceTree = "<group>"; };
+		B197C5F2448A713797D4C4A3277B17FF /* UIViewController+XSRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+XSRefresh.h"; path = "XInjectionIII/Classes/UIViewController+XSRefresh.h"; sourceTree = "<group>"; };
 		B5A99C2E07DB0A9BC3F0D40BA75163A0 /* Pods-XInjectionIII_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XInjectionIII_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B74E18E9B5C925AE88B8BE73E16059E2 /* Pods-XInjectionIII_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XInjectionIII_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB0A69842CC83B8A09D4C88DF1BC01F /* XInjectionIII.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XInjectionIII.h; path = XInjectionIII/Classes/XInjectionIII.h; sourceTree = "<group>"; };
 		C1B89712FC18E44895DCAE2D1F7C9DBE /* Pods-XInjectionIII_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XInjectionIII_Example-umbrella.h"; sourceTree = "<group>"; };
-		CE189AE535C3863876CF69FFE2E3C05A /* XInjectionIII-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XInjectionIII-Info.plist"; sourceTree = "<group>"; };
-		DCF433BAF51E21D32F549AC3672DE4DE /* UIViewController+XSRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+XSRefresh.m"; path = "XInjectionIII/Classes/UIViewController+XSRefresh.m"; sourceTree = "<group>"; };
-		DDABCCF0EECF83093A3955DD0180DB82 /* UIViewController+XSRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+XSRefresh.h"; path = "XInjectionIII/Classes/UIViewController+XSRefresh.h"; sourceTree = "<group>"; };
+		DC6041546D525815841F6CBCFA5D252D /* XInjectionIII.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = XInjectionIII.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E1FA0BA80CD88C11ADCE7C527E2175D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E335347CAEB214F01B45015843D56949 /* XInjectionIII-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XInjectionIII-umbrella.h"; sourceTree = "<group>"; };
+		F830D4A0BFE1204FBA5D5FE36DC472C5 /* XInjectionIII.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XInjectionIII.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BDCD17AF6F5323E34277EE370116192 /* Frameworks */ = {
+		50B43398A6A4DC31141637E14BD1B1EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F9A4EF92884D1C16A50358C6B7B47B /* Foundation.framework in Frameworks */,
+				BB1C69B2248FA719C966BB963987F284 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2697244ECF20B884B668E70301D0075E /* XInjectionIII */ = {
+			isa = PBXGroup;
+			children = (
+				083555F054118EA3FBDE24EE8A64DC9D /* InjectionIIIHelper.h */,
+				09DAE5507ED94E58CA7FE0B60CEAF0F2 /* InjectionIIIHelper.m */,
+				510F5BB6606D31C77373D79266305CDA /* UIView+XSRefresh.h */,
+				61B90B53BFA9E286CE8E620F9486BE23 /* UIView+XSRefresh.m */,
+				B197C5F2448A713797D4C4A3277B17FF /* UIViewController+XSRefresh.h */,
+				83F9A4C2B75D6D4612885888EE3A3C62 /* UIViewController+XSRefresh.m */,
+				BAB0A69842CC83B8A09D4C88DF1BC01F /* XInjectionIII.h */,
+				90363AE4A0DED4831E547F8CA96475AA /* Pod */,
+				B1F010D430B187F5B77099254CB167CE /* Support Files */,
+			);
+			name = XInjectionIII;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		39F2385281A3736D0AE7DD0996C0225F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2697244ECF20B884B668E70301D0075E /* XInjectionIII */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		45B23B6FF26E68A6A769041AFECA2DDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,16 +127,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		59B664CA21F22F58D022819DA4C4232E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				52E9F3E8311ED3E2133740C203A0CB55 /* LICENSE */,
-				99DC9FF58B33860639C99A5E4E895D51 /* README.md */,
-				8DF118A9480D55CD90FC07F661AA8446 /* XInjectionIII.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		696978CB92B26F3E501A7D64B24A0DEE /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,35 +135,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8E92693E97CF85B4B553A956F18371CB /* Support Files */ = {
+		90363AE4A0DED4831E547F8CA96475AA /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7F45B0D0010DFAB654889BEFD99DF69B /* XInjectionIII.modulemap */,
-				171FF4F457DA9E3C76DE172946A954AD /* XInjectionIII-dummy.m */,
-				CE189AE535C3863876CF69FFE2E3C05A /* XInjectionIII-Info.plist */,
-				5FCDF9A8771BFEA6DD796134E0E83A82 /* XInjectionIII-prefix.pch */,
-				4DF63476CF4AE7905693C6A024B83C8F /* XInjectionIII-umbrella.h */,
-				24FE956747CC00DD4FF8F6EAD5D232CC /* XInjectionIII.debug.xcconfig */,
-				1FAC7BB21F39509A80D994713423CB46 /* XInjectionIII.release.xcconfig */,
+				17BF0C2BA8899486CF768A8724574F01 /* LICENSE */,
+				E1FA0BA80CD88C11ADCE7C527E2175D8 /* README.md */,
+				DC6041546D525815841F6CBCFA5D252D /* XInjectionIII.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		B1F010D430B187F5B77099254CB167CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C034B165D192F39CF635A0C6659D16C /* XInjectionIII.modulemap */,
+				1525410BE55FB14B34CBF07F9632039B /* XInjectionIII-dummy.m */,
+				AB601A06CC52312D6C52B27566DC63AA /* XInjectionIII-Info.plist */,
+				9626BC7BE1A3E5F46B53A85AB5F3AF63 /* XInjectionIII-prefix.pch */,
+				E335347CAEB214F01B45015843D56949 /* XInjectionIII-umbrella.h */,
+				F830D4A0BFE1204FBA5D5FE36DC472C5 /* XInjectionIII.debug.xcconfig */,
+				52322AE1EB6DDBFB1A1FB240520B31B0 /* XInjectionIII.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/XInjectionIII";
-			sourceTree = "<group>";
-		};
-		A3B2436105F98CC2758FAE1A7BA60921 /* XInjectionIII */ = {
-			isa = PBXGroup;
-			children = (
-				8012C87ACB1217D9C0078A7BA95487F3 /* InjectionIIIHelper.h */,
-				0064C1A3BFF4229347A3634906F58871 /* InjectionIIIHelper.m */,
-				A6938501299A0ADFF9FBA6DB8DF4723F /* UIView+XSRefresh.h */,
-				6F5AA5DC8FC8F137EC64CA89427D4CC6 /* UIView+XSRefresh.m */,
-				DDABCCF0EECF83093A3955DD0180DB82 /* UIViewController+XSRefresh.h */,
-				DCF433BAF51E21D32F549AC3672DE4DE /* UIViewController+XSRefresh.m */,
-				59B664CA21F22F58D022819DA4C4232E /* Pod */,
-				8E92693E97CF85B4B553A956F18371CB /* Support Files */,
-			);
-			name = XInjectionIII;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		BAA218BD710FC22FBF6A6F76CBE28B82 /* Pods-XInjectionIII_Example */ = {
@@ -170,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D35F57398248AFF8D7320576398A8295 /* Development Pods */,
+				39F2385281A3736D0AE7DD0996C0225F /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				45B23B6FF26E68A6A769041AFECA2DDE /* Products */,
 				696978CB92B26F3E501A7D64B24A0DEE /* Targets Support Files */,
@@ -185,14 +196,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35F57398248AFF8D7320576398A8295 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A3B2436105F98CC2758FAE1A7BA60921 /* XInjectionIII */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -204,14 +207,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC52B1C98A55933F55EA096189926C5F /* Headers */ = {
+		66102EAB5A32ECD8FFFE9886C5C15E9A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C1231187A49DA663FFAAFA23EF7BE0A /* InjectionIIIHelper.h in Headers */,
-				C1F9B93FECAA71930B104E8DFE8632C9 /* UIView+XSRefresh.h in Headers */,
-				F596FBA4BBADCE0DDBA1FCDC7DBFB5EF /* UIViewController+XSRefresh.h in Headers */,
-				2302E40ACCDE57ACB61725EACD04A6BD /* XInjectionIII-umbrella.h in Headers */,
+				B206BE415C06F4AD1832D309DE50DB92 /* InjectionIIIHelper.h in Headers */,
+				B5291B261A56A5EEAC0643C188497E6C /* UIView+XSRefresh.h in Headers */,
+				D2B094DC2562A629CEB059A6910E95DD /* UIViewController+XSRefresh.h in Headers */,
+				4E05E30A64E52265C0EAB3DA4B10BA76 /* XInjectionIII.h in Headers */,
+				084B1C49C1B7C126A206BBF6BCC74A3D /* XInjectionIII-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,12 +224,12 @@
 /* Begin PBXNativeTarget section */
 		8CB07CB25C348B80F62F59A8DC534F25 /* XInjectionIII */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AE852AC44B1CEF0F4227EA8632E44C9 /* Build configuration list for PBXNativeTarget "XInjectionIII" */;
+			buildConfigurationList = BF907D6816C3DBFD760CD5648D72B69E /* Build configuration list for PBXNativeTarget "XInjectionIII" */;
 			buildPhases = (
-				FC52B1C98A55933F55EA096189926C5F /* Headers */,
-				4B80E160D8954557E4EA262C1C066090 /* Sources */,
-				1BDCD17AF6F5323E34277EE370116192 /* Frameworks */,
-				06192F42EEF8A133615EC0EFFB877279 /* Resources */,
+				66102EAB5A32ECD8FFFE9886C5C15E9A /* Headers */,
+				56778C730B93729D101EA79CB2928BD5 /* Sources */,
+				50B43398A6A4DC31141637E14BD1B1EF /* Frameworks */,
+				440B4078F7D7D063481C47C1DDA2BBC6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +252,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C37AB5A12DD54CE23260360A5D7C1256 /* PBXTargetDependency */,
+				BB302088A90B93AB2A7E8FC1504B047F /* PBXTargetDependency */,
 			);
 			name = "Pods-XInjectionIII_Example";
 			productName = Pods_XInjectionIII_Example;
@@ -284,7 +288,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		06192F42EEF8A133615EC0EFFB877279 /* Resources */ = {
+		440B4078F7D7D063481C47C1DDA2BBC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,14 +305,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B80E160D8954557E4EA262C1C066090 /* Sources */ = {
+		56778C730B93729D101EA79CB2928BD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F7BE06008A61E0907213ACC9537E0D /* InjectionIIIHelper.m in Sources */,
-				64682E048C5835EFBD0837FEDBFA4372 /* UIView+XSRefresh.m in Sources */,
-				B8AE0A949290A7611C692EA322B57462 /* UIViewController+XSRefresh.m in Sources */,
-				C75CD827C2385D4986E8EE487D901F12 /* XInjectionIII-dummy.m in Sources */,
+				7E5722C85F45C3170580531FB154C4D6 /* InjectionIIIHelper.m in Sources */,
+				1B39A68D6B1A2CF7A229038B5C815DA7 /* UIView+XSRefresh.m in Sources */,
+				F1ABD1FC379F90A488B5ABB047ECD101 /* UIViewController+XSRefresh.m in Sources */,
+				1B93B9BE3EF994D130285A4AE4248C23 /* XInjectionIII-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +327,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C37AB5A12DD54CE23260360A5D7C1256 /* PBXTargetDependency */ = {
+		BB302088A90B93AB2A7E8FC1504B047F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XInjectionIII;
 			target = 8CB07CB25C348B80F62F59A8DC534F25 /* XInjectionIII */;
-			targetProxy = 9633BF2AA62AB5F2D1FEC94BD932E990 /* PBXContainerItemProxy */;
+			targetProxy = F14D171EB12C794C86A2735EE4FDBFF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,40 +402,9 @@
 			};
 			name = Debug;
 		};
-		718A0F4FA90C239425CCC48EEA2BAF72 /* Release */ = {
+		42346DD1B27AEF60148954414C2C8619 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FAC7BB21F39509A80D994713423CB46 /* XInjectionIII.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XInjectionIII/XInjectionIII-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XInjectionIII/XInjectionIII-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XInjectionIII/XInjectionIII.modulemap";
-				PRODUCT_MODULE_NAME = XInjectionIII;
-				PRODUCT_NAME = XInjectionIII;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		742F6D3DB66F9CA65BDCC153E85AB1C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24FE956747CC00DD4FF8F6EAD5D232CC /* XInjectionIII.debug.xcconfig */;
+			baseConfigurationReference = F830D4A0BFE1204FBA5D5FE36DC472C5 /* XInjectionIII.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -485,6 +458,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B9DAF6251B3F0F4C531DE12DB6779128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52322AE1EB6DDBFB1A1FB240520B31B0 /* XInjectionIII.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XInjectionIII/XInjectionIII-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XInjectionIII/XInjectionIII-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XInjectionIII/XInjectionIII.modulemap";
+				PRODUCT_MODULE_NAME = XInjectionIII;
+				PRODUCT_NAME = XInjectionIII;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -598,20 +602,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AE852AC44B1CEF0F4227EA8632E44C9 /* Build configuration list for PBXNativeTarget "XInjectionIII" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				742F6D3DB66F9CA65BDCC153E85AB1C4 /* Debug */,
-				718A0F4FA90C239425CCC48EEA2BAF72 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A658B27C936801A6D740A63A89AFBE57 /* Build configuration list for PBXNativeTarget "Pods-XInjectionIII_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6A8046633A48419C8CC6789C8094EA9 /* Debug */,
 				A0CD4C0610608DFF0F9727ABC99300B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF907D6816C3DBFD760CD5648D72B69E /* Build configuration list for PBXNativeTarget "XInjectionIII" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42346DD1B27AEF60148954414C2C8619 /* Debug */,
+				B9DAF6251B3F0F4C531DE12DB6779128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

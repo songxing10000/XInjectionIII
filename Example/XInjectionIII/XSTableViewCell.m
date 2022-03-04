@@ -7,7 +7,7 @@
 //
 
 #import "XSTableViewCell.h"
-#import <XInjectionIII/UIView+XSRefresh.h>
+#import <XInjectionIII/XInjectionIII.h>
 
 @implementation XSTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {

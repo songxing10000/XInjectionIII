@@ -7,7 +7,7 @@
 //
 
 #import "SXViewController.h"
-#import <XInjectionIII/UIViewController+XSRefresh.h>
+#import <XInjectionIII/XInjectionIII.h>
 
 @interface SXViewController ()
 
