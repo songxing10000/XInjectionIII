@@ -1,10 +1,17 @@
 use_frameworks!
-
 platform :ios, '9.0'
+workspace 'XInjectionIII.xcworkspace'
+
+
+
+
+target 'SwiftTest' do
+  pod 'XInjectionIII', :path => '../'
+  project 'SwiftTest.xcodeproj'
+end
+
 
 target 'XInjectionIII_Example' do
   pod 'XInjectionIII', :path => '../'
-#pod 'XInjectionIII', :git => 'https://github.com/songxing10000/XInjectionIII'
-
-
+  project 'XInjectionIII.xcodeproj'
 end
