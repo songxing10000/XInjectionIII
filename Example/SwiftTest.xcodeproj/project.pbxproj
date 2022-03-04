@@ -14,6 +14,8 @@
 		988C7C4027D2429600F84A35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988C7C3E27D2429600F84A35 /* Main.storyboard */; };
 		988C7C4227D2429800F84A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988C7C4127D2429800F84A35 /* Assets.xcassets */; };
 		988C7C4527D2429800F84A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988C7C4327D2429800F84A35 /* LaunchScreen.storyboard */; };
+		988C7C5127D24B2C00F84A35 /* XTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C7C5027D24B2C00F84A35 /* XTestView.swift */; };
+		988C7C5327D24B4300F84A35 /* XTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C7C5227D24B4300F84A35 /* XTestCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		988C7C4127D2429800F84A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		988C7C4427D2429800F84A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		988C7C4627D2429800F84A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988C7C5027D24B2C00F84A35 /* XTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTestView.swift; sourceTree = "<group>"; };
+		988C7C5227D24B4300F84A35 /* XTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTestCell.swift; sourceTree = "<group>"; };
 		B1D59F163A3BC3078323E00B /* Pods-SwiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.release.xcconfig"; path = "Target Support Files/Pods-SwiftTest/Pods-SwiftTest.release.xcconfig"; sourceTree = "<group>"; };
 		CCFD214DB5AB20131B1EFC47 /* Pods-SwiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTest.debug.xcconfig"; path = "Target Support Files/Pods-SwiftTest/Pods-SwiftTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,8 @@
 				988C7C3827D2429600F84A35 /* AppDelegate.swift */,
 				988C7C3A27D2429600F84A35 /* SceneDelegate.swift */,
 				988C7C3C27D2429600F84A35 /* ViewController.swift */,
+				988C7C5027D24B2C00F84A35 /* XTestView.swift */,
+				988C7C5227D24B4300F84A35 /* XTestCell.swift */,
 				988C7C3E27D2429600F84A35 /* Main.storyboard */,
 				988C7C4127D2429800F84A35 /* Assets.xcassets */,
 				988C7C4327D2429800F84A35 /* LaunchScreen.storyboard */,
@@ -207,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				988C7C3D27D2429600F84A35 /* ViewController.swift in Sources */,
+				988C7C5127D24B2C00F84A35 /* XTestView.swift in Sources */,
 				988C7C3927D2429600F84A35 /* AppDelegate.swift in Sources */,
+				988C7C5327D24B4300F84A35 /* XTestCell.swift in Sources */,
 				988C7C3B27D2429600F84A35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

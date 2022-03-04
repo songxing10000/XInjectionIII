@@ -21,7 +21,7 @@
     [super viewDidLoad];
 	
     [self addRealTimeRefresh];
-    self.title = @"地址???";
+    self.title = @"地2址";
     
     
     [self.view addSubview: [[XSTestView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)]];

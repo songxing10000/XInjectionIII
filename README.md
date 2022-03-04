@@ -82,6 +82,7 @@ view
 ---
 ### Swift也一样的
 ```swift
+// vc文件中
 import UIKit
 import XInjectionIII
 class ViewController: UIViewController {
@@ -97,7 +98,7 @@ class ViewController: UIViewController {
         view.addSubview(XTestCell(frame: CGRect(x: 200, y: 200, width: 100, height: 100)))
     }
 }
-
+/// 在XTestView.swift文件中
 class XTestView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -112,6 +113,7 @@ class XTestView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+/// XTestCell.swift文件中
 class XTestCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
