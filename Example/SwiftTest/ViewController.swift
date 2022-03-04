@@ -19,6 +19,34 @@ class ViewController: UIViewController {
         
         view.addSubview(XTestCell(frame: CGRect(x: 200, y: 200, width: 100, height: 100)))
     }
-
 }
 
+class XTestView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addRealTimeRefresh(byAction: #selector(configUI))
+    }
+    @objc func configUI() {
+        backgroundColor = .yellow
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+class XTestCell: UITableViewCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super .init(style: style, reuseIdentifier: reuseIdentifier)
+    
+        addRealTimeRefresh(byAction: #selector(configUI))
+    }
+    @objc func configUI() {
+        contentView.backgroundColor = .blue
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}

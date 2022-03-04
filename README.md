@@ -10,13 +10,13 @@
 pod 'XInjectionIII', :git => 'https://github.com/songxing10000/XInjectionIII'
  ```
 ---
-### 使用：
+### 前提
 启动`InjectionIII`,打开项目所在文件夹。
 
-
-
- vc使用
-
+---
+### OC使用：
+ 
+页面
  ```objc
  #import "SXViewController.h"
 #import <XInjectionIII/XInjectionIII.h>
@@ -37,7 +37,7 @@ pod 'XInjectionIII', :git => 'https://github.com/songxing10000/XInjectionIII'
  
 @end
 ```
-cell使用
+cell 
 ```objc
 #import "XSTableViewCell.h"
 #import <XInjectionIII/XInjectionIII.h>
@@ -55,7 +55,7 @@ cell使用
 }
 @end
 ```
-view使用
+view 
 ```objc
 #import "XSTestView.h"
 #import <XInjectionIII/XInjectionIII.h>
@@ -78,6 +78,57 @@ view使用
 @end
 ```
 修改代码后，可设置自动刷新或者按`command`加`s`手动保存刷新
+
+---
+### Swift也一样的
+```swift
+import UIKit
+import XInjectionIII
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addRealTimeRefresh()
+        title = "?ffff?000dsf"
+        
+        view.addSubview(XTestView(frame: CGRect(x: 100, y: 100, width: 100, height: 100)))
+        
+        view.addSubview(XTestCell(frame: CGRect(x: 200, y: 200, width: 100, height: 100)))
+    }
+}
+
+class XTestView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addRealTimeRefresh(byAction: #selector(configUI))
+    }
+    @objc func configUI() {
+        backgroundColor = .yellow
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+class XTestCell: UITableViewCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super .init(style: style, reuseIdentifier: reuseIdentifier)
+    
+        addRealTimeRefresh(byAction: #selector(configUI))
+    }
+    @objc func configUI() {
+        contentView.backgroundColor = .blue
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+```
+
 
 ---
 ### 本地`pod`库
