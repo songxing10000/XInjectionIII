@@ -8,13 +8,17 @@
 #import "UIView+XSRefresh.h"
 
 @implementation UIView (XSRefresh)
-
--(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(NSArray<UIView *> *)controlsNotRemoved {
+-(void)addRealTimeRefreshByAction:(nullable SEL)action {
+    [self addRealTimeRefreshByAction:action controlsNotRemoved:nil];
+}
+-(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(nullable NSArray<UIView *> *)controlsNotRemoved {
 
 #if TARGET_IPHONE_SIMULATOR
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
     UIView.action = action;
-    UIView.controlsNotRemoved = controlsNotRemoved;
+    if (controlsNotRemoved.count > 0) {
+        UIView.controlsNotRemoved = controlsNotRemoved;
+    }
 #endif
     
 }

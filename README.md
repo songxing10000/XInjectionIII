@@ -67,7 +67,7 @@ view
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addRealTimeRefreshByAction:@selector(configUI)];
+        [self addRealTimeRefreshByAction:@selector(configUI) controlsNotRemoved:@[self.containerView]];
         [self configUI];
     }
     return self;
