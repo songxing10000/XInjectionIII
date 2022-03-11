@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (XSRefresh)
--(void)addRealTimeRefreshByAction:(nullable SEL)action;
+-(void)addRealTimeRefreshByAction:(nullable SEL)action  controlsNotRemoved:(NSArray<UIView *> *)controlsNotRemoved ;
 
 @end
 

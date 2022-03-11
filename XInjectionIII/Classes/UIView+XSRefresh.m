@@ -9,11 +9,12 @@
 
 @implementation UIView (XSRefresh)
 
--(void)addRealTimeRefreshByAction:(nullable SEL)action {
+-(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(NSArray<UIView *> *)controlsNotRemoved {
 
 #if TARGET_IPHONE_SIMULATOR
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
     UIView.action = action;
+    UIView.controlsNotRemoved = controlsNotRemoved;
 #endif
     
 }
@@ -23,6 +24,13 @@ static SEL _action = nil;
 + (void)setAction:(SEL)action {
   if (_action != action) {
       _action = action;
+  }
+}
+/// 刷新时不从父控件上移除的控件
+static NSArray<UIView *> *_controlsNotRemoved = nil;
++ (void)setControlsNotRemoved :(NSArray<UIView *> *)controlsNotRemoved {
+  if (_controlsNotRemoved != controlsNotRemoved) {
+      _controlsNotRemoved = controlsNotRemoved;
   }
 }
 - (void)injectionNotification:(NSNotification *)notification {
@@ -50,8 +58,12 @@ static SEL _action = nil;
             }
             
             else {
-                
-                [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+                [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if(![_controlsNotRemoved containsObject:obj]) {
+                        [obj removeFromSuperview];
+                    }
+                }];
+//                [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
                 
             }
             [self performSelector:_action];
