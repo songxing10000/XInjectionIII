@@ -60,6 +60,14 @@ static NSArray<UIView *> *_controlsNotRemoved = nil;
                 [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
                 
             }
+            else if ([self isKindOfClass:[UITableViewHeaderFooterView class]]) {
+                
+                UITableViewHeaderFooterView *hfv = (UITableViewHeaderFooterView *)self;
+                
+                [hfv.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+                
+            }
+            
             
             else {
                 [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
