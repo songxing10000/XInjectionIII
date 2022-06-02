@@ -6,7 +6,7 @@
 //
 
 #import "UIView+XSRefresh.h"
-
+#import <objc/runtime.h>
 @implementation UIView (XSRefresh)
 -(void)addRealTimeRefreshByAction:(nullable SEL)action {
     [self addRealTimeRefreshByAction:action controlsNotRemoved:nil];
@@ -15,9 +15,9 @@
 
 #if TARGET_IPHONE_SIMULATOR
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
-    UIView.action = action;
+    [self class].action = action;
     if (controlsNotRemoved.count > 0) {
-        UIView.controlsNotRemoved = controlsNotRemoved;
+        self.controlsNotRemoved = controlsNotRemoved;
     }
 #endif
     
@@ -30,13 +30,18 @@ static SEL _action = nil;
       _action = action;
   }
 }
-/// 刷新时不从父控件上移除的控件
-static NSArray<UIView *> *_controlsNotRemoved = nil;
-+ (void)setControlsNotRemoved :(NSArray<UIView *> *)controlsNotRemoved {
-  if (_controlsNotRemoved != controlsNotRemoved) {
-      _controlsNotRemoved = controlsNotRemoved;
-  }
++(SEL)action {
+    return _action;
 }
+//@property(nonatomic, strong) NSArray<UIView *>  *controlsNotRemoved;
+- (void)setControlsNotRemoved:(NSArray<UIView *> *)controlsNotRemoved {
+    objc_setAssociatedObject(self, @selector(controlsNotRemoved), controlsNotRemoved, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSArray<UIView *> *)controlsNotRemoved {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+
 - (void)injectionNotification:(NSNotification *)notification {
     
     NSArray *array = notification.object;
@@ -49,7 +54,9 @@ static NSArray<UIView *> *_controlsNotRemoved = nil;
                 
                 UITableViewCell *cell = (UITableViewCell *)self;
                 
-                [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+                [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [obj removeFromSuperview];
+                }];
                 
             }
             
@@ -57,28 +64,33 @@ static NSArray<UIView *> *_controlsNotRemoved = nil;
                 
                 UICollectionViewCell *cell = (UICollectionViewCell *)self;
                 
-                [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-                
+                [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [obj removeFromSuperview];
+                }];
             }
             else if ([self isKindOfClass:[UITableViewHeaderFooterView class]]) {
                 
                 UITableViewHeaderFooterView *hfv = (UITableViewHeaderFooterView *)self;
                 
-                [hfv.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-                
+                [hfv.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [obj removeFromSuperview];
+                }];
             }
             
             
             else {
                 [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    if(![_controlsNotRemoved containsObject:obj]) {
+                    if(![self.controlsNotRemoved containsObject:obj]) {
                         [obj removeFromSuperview];
+                    } else {
+                        [obj.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                            [obj removeFromSuperview];
+                        }];
                     }
                 }];
-//                [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
                 
             }
-            [self performSelector:_action];
+            [self performSelector:[self class].action];
             
         }
         
@@ -88,3 +100,4 @@ static NSArray<UIView *> *_controlsNotRemoved = nil;
 #endif
  
 @end
+
