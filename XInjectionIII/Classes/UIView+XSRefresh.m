@@ -6,7 +6,7 @@
 //
 
 #import "UIView+XSRefresh.h"
-
+#import <objc/runtime.h>
 @implementation UIView (XSRefresh)
 -(void)addRealTimeRefreshByAction:(nullable SEL)action {
 #if TARGET_IPHONE_SIMULATOR
@@ -16,7 +16,7 @@
 -(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(nullable NSArray<UIView *> *)controlsNotRemoved {
 #if TARGET_IPHONE_SIMULATOR
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
-    xs_action = action;
+    self.action = action;
     if (controlsNotRemoved.count > 0) {
         xs_controlsNotRemoved = controlsNotRemoved;
     }
@@ -24,7 +24,12 @@
 }
 
 #if TARGET_IPHONE_SIMULATOR
-static SEL xs_action = nil;
+- (void)setAction:(SEL)action {
+    objc_setAssociatedObject(self, "k_ref_action", NSStringFromSelector(action), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+- (SEL)action {
+    return NSSelectorFromString(objc_getAssociatedObject(self, "k_ref_action"));
+}
 /// 刷新时不从父控件上移除的控件
 static NSArray<UIView *> *xs_controlsNotRemoved = nil;
 
@@ -67,7 +72,10 @@ static NSArray<UIView *> *xs_controlsNotRemoved = nil;
                     }
                 }];
             }
-            [self performSelector:xs_action];
+             
+            [self performSelector: self.action];
+            
+             
         }
     }];
 }
