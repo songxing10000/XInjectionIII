@@ -99,6 +99,10 @@ class ViewController: UIViewController {
         
         view.addSubview(XTestCell(frame: CGRect(x: 200, y: 200, width: 100, height: 100)))
     }
+    // 如果报错 Use of unimplemented initializer 'init(nibName:bundle:)' for class，得加这个代码
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
 }
 /// 在XTestView.swift文件中
 class XTestView: UIView {
