@@ -8,7 +8,6 @@
 #ifndef XInjectionIII_h
 #define XInjectionIII_h
 
-#import "UIView+XSRefresh.h"
-#import "UIViewController+XSRefresh.h"
+ 
 
 #endif /* XInjectionIII_h */
