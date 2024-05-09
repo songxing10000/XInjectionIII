@@ -5,12 +5,12 @@
 //  Created by dfpo on 2020/12/14.
 //
 
-#import <Foundation/Foundation.h>
-
 #ifdef TARGET_IPHONE_SIMULATOR
+
+#import <Foundation/Foundation.h>
 
 @interface InjectionIIIHelper : NSObject
 
 @end
- 
+
 #endif

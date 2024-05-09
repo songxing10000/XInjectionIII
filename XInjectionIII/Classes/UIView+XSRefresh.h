@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)addRealTimeRefreshByAction:(nullable SEL)action;
 -(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(nullable NSArray<UIView *> *)controlsNotRemoved;
 
+- (void)xRemoveAllSubviews;
 @end
 
 NS_ASSUME_NONNULL_END

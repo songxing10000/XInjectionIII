@@ -22,7 +22,12 @@
     }
 #endif
 }
-
+- (void)xRemoveAllSubviews {
+    for (UIView *subview in self.subviews) {
+        [subview xRemoveAllSubviews];
+        [subview removeFromSuperview];
+    }
+}
 #if TARGET_IPHONE_SIMULATOR
 - (void)setAction:(SEL)action {
     objc_setAssociatedObject(self, "k_ref_action", NSStringFromSelector(action), OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -72,8 +77,11 @@ static NSArray<UIView *> *xs_controlsNotRemoved = nil;
                     }
                 }];
             }
-             
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [self performSelector: self.action];
+#pragma clang diagnostic pop
             
              
         }

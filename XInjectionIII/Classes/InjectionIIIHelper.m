@@ -5,13 +5,14 @@
 //  Created by dfpo on 2020/12/14.
 //
 
+#ifdef TARGET_IPHONE_SIMULATOR
+
 #import "InjectionIIIHelper.h"
 #import <objc/runtime.h>
 #import <UIKit/UIApplication.h>
 
- 
-
 @implementation InjectionIIIHelper
+
 + (void)load {
     //注册项目启动监听
     __block id observer =
@@ -24,3 +25,5 @@
     }];
 }
 @end
+
+#endif
