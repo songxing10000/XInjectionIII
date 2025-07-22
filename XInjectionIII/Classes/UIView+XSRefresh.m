@@ -4,113 +4,173 @@
 //
 //  Created by dfpo on 03/03/2022.
 //
-
+#import <TargetConditionals.h>  // 包含TARGET_IPHONE_SIMULATOR定义
 #import "UIView+XSRefresh.h"
 #import <objc/runtime.h>
 @implementation UIView (XSRefresh)
--(void)addRealTimeRefreshByAction:(nullable SEL)action {
+- (UIViewController *)xViewController {
 #if TARGET_IPHONE_SIMULATOR
-    [self addRealTimeRefreshByAction:action controlsNotRemoved:nil];
-#endif
-}
--(void)addRealTimeRefreshByAction:(nullable SEL)action controlsNotRemoved:(nullable NSArray<UIView *> *)controlsNotRemoved {
-#if TARGET_IPHONE_SIMULATOR
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
-    self.action = action;
-    if (controlsNotRemoved.count > 0) {
-        xs_controlsNotRemoved = controlsNotRemoved;
+    UIResponder *responder = self;
+    while ((responder = [responder nextResponder])) {
+        if ([responder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)responder;
+        }
     }
+    return nil;
 #endif
 }
 - (void)xRemoveAllSubviews {
+#if TARGET_IPHONE_SIMULATOR
     for (UIView *subview in self.subviews) {
-        [subview xRemoveAllSubviews];
-        [subview removeFromSuperview];
+        if ([subview isKindOfClass:[CALayer class]] ||
+            [subview isKindOfClass:[UITabBar class]] ||
+            [subview isKindOfClass:[UINavigationBar class]] ||
+            [subview isKindOfClass:[UINavigationController class]] ||
+            [subview isKindOfClass:NSClassFromString(@"UITransitionView")] ||
+            [subview isKindOfClass:NSClassFromString(@"UINavigationTransitionView")] ||
+            [NSStringFromClass([subview class]) hasPrefix:@"_"] ||
+            [subview isKindOfClass:NSClassFromString(@"UILayoutContainerView")] ||
+            [subview isKindOfClass:NSClassFromString(@"TUIPredictionViewStackView")]){
+            // 跳过
+        }
+        else {
+            
+            [subview xRemoveAllSubviews];
+            [subview removeFromSuperview];
+        }
     }
+#endif
 }
 #if TARGET_IPHONE_SIMULATOR
-- (void)setAction:(SEL)action {
-    objc_setAssociatedObject(self, "k_ref_action", NSStringFromSelector(action), OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-- (SEL)action {
-    return NSSelectorFromString(objc_getAssociatedObject(self, "k_ref_action"));
-}
-/// 刷新时不从父控件上移除的控件
-static NSArray<UIView *> *xs_controlsNotRemoved = nil;
++ (void)load {
 
-- (void)injectionNotification:(NSNotification *)notification {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleInitWithFrame];
+    });
+}
+//
++ (void)swizzleInitWithFrame {
+    Class class = [UIView class];
     
-    NSArray *array = notification.object;
-    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([self isKindOfClass:obj]) {
-            
-            if ([self isKindOfClass:[UITableViewCell class]]) {
-                
-                UITableViewCell *cell = (UITableViewCell *)self;
-                [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [obj removeFromSuperview];
-                }];
-            }
-            
-            else if ([self isKindOfClass:[UICollectionViewCell class]]) {
-                
-                UICollectionViewCell *cell = (UICollectionViewCell *)self;
-                [cell.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [obj removeFromSuperview];
-                }];
-            }
-            else if ([self isKindOfClass:[UITableViewHeaderFooterView class]]) {
-                
-                UITableViewHeaderFooterView *hfv = (UITableViewHeaderFooterView *)self;
-                [hfv.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [obj removeFromSuperview];
-                }];
-            }
-            else {
-                [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    if(![xs_controlsNotRemoved containsObject:obj]) {
-                        [obj removeFromSuperview];
-                    } else {
-                        [obj.subviews  enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                            [obj removeFromSuperview];
-                        }];
-                    }
-                }];
-            }
-            
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-            [self performSelector: self.action];
-#pragma clang diagnostic pop
-            
-             
-        }
-    }];
+    SEL originalSelector = @selector(initWithFrame:);
+    SEL swizzledSelector = @selector(xs_initWithFrame:);
+    
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    
+    // 检查方法是否存在
+    if (!originalMethod || !swizzledMethod) {
+        NSLog(@"[XSRefresh] Method swizzling failed: initWithFrame method not found");
+        return;
+    }
+    
+    // 尝试添加方法，如果已存在则返回NO
+    BOOL didAddMethod = class_addMethod(class,
+                                       originalSelector,
+                                       method_getImplementation(swizzledMethod),
+                                       method_getTypeEncoding(swizzledMethod));
+    
+    if (didAddMethod) {
+        // 成功添加了方法，替换swizzled方法的实现
+        class_replaceMethod(class,
+                           swizzledSelector,
+                           method_getImplementation(originalMethod),
+                           method_getTypeEncoding(originalMethod));
+    } else {
+        // 方法已存在，直接交换实现
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
 }
-#endif
 
-@end
+- (instancetype)xs_initWithFrame:(CGRect)frame {
+    // 调用原始的initWithFrame方法
+    UIView *view = [self xs_initWithFrame:frame];
+    
+    if (view) {
+        // 在这里可以添加初始化后的处理逻辑
+        [view setupInjectionObserver];
+    }
+    
+    return view;
+}
 
-/*
- 将SEL转换为NSString
- - (void)setAction:(SEL)action {
-     objc_setAssociatedObject(self, "k_ref_action", NSStringFromSelector(action), OBJC_ASSOCIATION_COPY_NONATOMIC);
- }
- - (SEL)action {
-     return NSSelectorFromString(objc_getAssociatedObject(self, "k_ref_action"));
- }
+- (void)setupInjectionObserver {
+    // 检查是否已经设置过观察者，避免重复设置
+    NSNumber *hasObserver = objc_getAssociatedObject(self, @selector(setupInjectionObserver));
+    if (![hasObserver boolValue]) {
+        
+        // 标记已设置观察者
+        objc_setAssociatedObject(self, @selector(setupInjectionObserver), @YES, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        
+        // 这里可以添加需要在view初始化后执行的逻辑
+        // 比如自动添加injection监听等
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(injectionNotification:) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
+    }
+}
+- (void)injectionNotification:(NSNotification *)notification {
+    if ([NSStringFromClass([self class]) hasPrefix:@"_"] ||
+        [self isKindOfClass:[UITabBar class]] ||
+        [self isKindOfClass:[UILabel class]] ||
+        [self isKindOfClass:[UINavigationBar class]] ||
+        [self isKindOfClass:[UIWindow class]] ||
+        [self isKindOfClass:[UIImage class]] ||
+        [self isKindOfClass:[UIImageView class]] ||
+        [self isKindOfClass:[UITableView class]] ||
+        [self isMemberOfClass:[UIView class]] ||
+        [self isKindOfClass:[UIActivityIndicatorView class]] ||
 
- 将SEL转换为NSValue
-
- - (void)setAction:(SEL)action {
-     NSValue *selValue = [NSValue valueWithBytes:&action objCType:@encode(SEL)];
-     objc_setAssociatedObject(self, "k_ref_action", selValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
- }
- - (SEL)action {
-     NSValue *av = objc_getAssociatedObject(self, "k_ref_action");
-     SEL as;
-     [av getValue:&as];
-     return as;
- }
+        
+        
+        [self isKindOfClass:[UIVisualEffectView class]] ||
+        [self isKindOfClass:[UISearchBar class]] ||
+        
  
- */
+ 
+        [self isKindOfClass: NSClassFromString(@"UISearchBarTextField")] ||
+
+         [self isKindOfClass: NSClassFromString(@"UISearchBarBackground")] ||
+
+        [self isKindOfClass: NSClassFromString(@"UITableViewCellContentView")] ||
+
+        [self isKindOfClass: NSClassFromString(@"UITableViewCellContentView")] ||
+
+        [self isKindOfClass: NSClassFromString(@"UITabBarSwappableImageView")] ||
+ 
+        [self isKindOfClass: NSClassFromString(@"UITabBarButton")] ||
+        [self isKindOfClass: NSClassFromString(@"UIDropShadowView")] ||
+        [self isKindOfClass: NSClassFromString(@"UIDimmingView")] ||
+
+ 
+         [self isKindOfClass: NSClassFromString(@"UILayoutContainerView")] ||
+ 
+ 
+        [self isKindOfClass: NSClassFromString(@"UIDynamicSystemColor")] ||
+        [self isKindOfClass:NSClassFromString(@"UITransitionView")] ||
+        
+        [self isKindOfClass:NSClassFromString(@"UIViewControllerWrapperView")] ||
+        [self isKindOfClass: NSClassFromString(@"UINavigationTransitionView")]
+        ) {
+        
+        return;
+    }
+    NSLog(@"self 是 %@", NSStringFromClass([self class]));
+    NSArray *array = notification.object;
+    for (id obj in array) {
+         // TODO:这里是不是应该用 obj xViewController
+        UIViewController *vc = [self xViewController];
+        if (vc) {
+            // 移除原来的view
+            [vc.view xRemoveAllSubviews];
+            [vc loadView];
+            [vc viewDidLoad];
+            [vc viewWillLayoutSubviews];
+            [vc viewWillAppear:NO];
+        }
+        
+    }
+}
+ 
+#endif
+@end
+ 

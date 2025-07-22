@@ -4,10 +4,12 @@
 //
 //  Created by mac on 2023/8/17.
 //
+#import <TargetConditionals.h>  // 包含TARGET_IPHONE_SIMULATOR定义
 #ifdef DEBUG
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-#ifdef TARGET_IPHONE_SIMULATOR
+
+#if TARGET_IPHONE_SIMULATOR
 
 BOOL method_swizzle(Class klass, SEL origSel, SEL altSel)
 {

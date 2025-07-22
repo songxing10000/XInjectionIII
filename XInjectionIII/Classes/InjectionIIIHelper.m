@@ -5,9 +5,8 @@
 //  Created by dfpo on 2020/12/14.
 //
 
-#ifdef TARGET_IPHONE_SIMULATOR
-
 #import "InjectionIIIHelper.h"
+#if TARGET_IPHONE_SIMULATOR
 #import <objc/runtime.h>
 #import <UIKit/UIApplication.h>
 

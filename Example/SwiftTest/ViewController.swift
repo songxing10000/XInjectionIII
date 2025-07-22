@@ -6,18 +6,18 @@
 //
 
 import UIKit
-import XInjectionIII
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addRealTimeRefresh()
+        self.view.backgroundColor = .red
         title = "."
         
-        view.addSubview(XTestView(frame: CGRect(x: 100, y: 100, width: 100, height: 100)))
+        view.addSubview(XTestView(frame: CGRect(x: 100, y: 400, width: 100, height: 100)))
         
-        view.addSubview(XTestCell(frame: CGRect(x: 200, y: 200, width: 100, height: 100)))
+        view.addSubview(XTestCell(frame: CGRect(x: 200, y: 700, width: 100, height: 100)))
     }
 }
 

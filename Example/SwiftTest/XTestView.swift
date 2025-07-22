@@ -9,10 +9,10 @@ import UIKit
 class XTestView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addRealTimeRefresh(byAction: #selector(configUI))
-    }
-    @objc func configUI() {
-        backgroundColor = .blue
+        configUI()
+     }
+     func configUI() {
+         backgroundColor = .blue
     }
     
     

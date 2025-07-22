@@ -7,7 +7,6 @@
 //
 
 #import "SXViewController.h"
-#import <XInjectionIII/XInjectionIII.h>
 #import "XSTableViewCell.h"
 #import "XSTestView.h"
 
@@ -19,13 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-    [self addRealTimeRefresh];
+	 
     self.title = @"地2址";
     
     
-    [self.view addSubview: [[XSTestView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)]];
-    [self.view addSubview: [[XSTableViewCell new]initWithFrame:CGRectMake(100, 900, 100, 100)]];
+    UIView *testView = [XSTestView new];
+    [self.view addSubview:testView];
+    testView.frame = CGRectMake(100, 100, 100, 100);
+    XSTableViewCell *cell = [[XSTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ff"];
+    [self.view addSubview: cell];
+    cell.frame = CGRectMake(100, 500, 100, 100);
 }
  
 @end

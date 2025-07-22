@@ -9,11 +9,11 @@ import UIKit
 class XTestCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super .init(style: style, reuseIdentifier: reuseIdentifier)
+        configUI()
     
-        addRealTimeRefresh(byAction: #selector(configUI))
-    }
-    @objc func configUI() {
-        contentView.backgroundColor = .yellow
+     }
+     func configUI() {
+         contentView.backgroundColor = .yellow
     }
     
     

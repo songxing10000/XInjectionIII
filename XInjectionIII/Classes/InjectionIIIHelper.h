@@ -4,8 +4,8 @@
 //
 //  Created by dfpo on 2020/12/14.
 //
-
-#ifdef TARGET_IPHONE_SIMULATOR
+#import <TargetConditionals.h>  // 包含TARGET_IPHONE_SIMULATOR定义
+#if TARGET_IPHONE_SIMULATOR
 
 #import <Foundation/Foundation.h>
 
